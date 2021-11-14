@@ -1,0 +1,14 @@
+version: "3.9"
+services: 
+  crnn:
+    build: 
+      context: .
+    image: kuangda/crnn-jupyter
+    ports: 
+      - "8888:8888"
+    environment: 
+      - JUPYTER_ENABLE_LAB=yes
+    volumes: 
+      - .:/home/derek/analysis-2
+    working_dir: /home/derek/analysis-2
+    shm_size: '64gb'
